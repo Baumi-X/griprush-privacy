@@ -1,37 +1,38 @@
-# Baumi-X Website
+# Baumix – Developer Website
 
-This repository hosts the public website for **Baumi-X**, an independent
-mobile game developer, via GitHub Pages.
+This repository hosts the public developer website for **Baumix**, used as
+the "developer website" entry in the Google Play Console. It is served via
+GitHub Pages.
 
 Live site: https://baumi-x.github.io/griprush-privacy/
 
 ## Structure
 
-- `index.html` – Home page: about Baumi-X and an overview of current
-  projects (GripRush).
-- `privacy.html` – The canonical GripRush privacy policy (DE/EN), linked
-  from the Google Play Store listing.
-- `games/griprush.html` – Project page for GripRush (feature overview,
-  screenshot placeholders, store link).
-- `contact.html` – Contact / legal notice (imprint), email
-  `baumix@gmail.com`.
-- `styles.css` – Shared dark-theme stylesheet (header/nav, footer, cards)
-  used by all pages.
+- `index.html` – Landing page: short bilingual (DE/EN) introduction to
+  Baumix and the upcoming game **GripRush** (neon cyberpunk endless
+  runner, currently "coming soon" – no store link yet), contact email, and
+  a link to the privacy policy.
+- `privacy.html` – The canonical GripRush privacy policy (DE/EN), content
+  unchanged from the previous single-page version. Linked from the Google
+  Play Store listing.
+- `styles.css` – Shared dark-theme stylesheet (header/nav, language
+  switch, footer) used by both pages.
 
-No build tools are used — this is plain static HTML/CSS/JS, fully
-compatible with GitHub Pages.
+Both pages use the same DE/EN language-switch mechanism (hash-based
+section toggling), matching colors/fonts (`#0b0f14` background, `#e8ecf1`
+text, `#22d3ee` → `#d946ef` accent gradient).
 
-## Google Play Store link
+No build tools are used — this is plain static HTML/CSS, fully compatible
+with GitHub Pages (deploys automatically from `main`).
 
-The Google Play Store listing for GripRush links to this domain. Since
-`index.html` was previously the privacy policy itself, the policy has been
-moved to `privacy.html` and `index.html` is now the site's home page. The
-home page prominently links to **"Datenschutzerklärung / Privacy Policy"**
-(`privacy.html`), so the privacy policy remains easy to find whether the
-Play Store link points at the root domain or is updated to point directly
-at `privacy.html`.
+## Google Play
 
-The source draft (with editorial history) is maintained in the main
-GripRush game repository at `Griprush/PRIVACY_POLICY_DRAFT.md`. When that
-draft changes, update `privacy.html` here to match and keep the "Last
-updated" date in sync.
+- **Developer website** (Play Console): the site root,
+  https://baumi-x.github.io/griprush-privacy/
+- **Privacy policy** (Play Store listing): `privacy.html`,
+  https://baumi-x.github.io/griprush-privacy/privacy.html
+
+The source draft of the privacy policy (with editorial history) is
+maintained in the main GripRush game repository at
+`Griprush/PRIVACY_POLICY_DRAFT.md`. When that draft changes, update
+`privacy.html` here to match and keep the "Last updated" date in sync.

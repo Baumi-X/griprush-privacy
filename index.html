@@ -3,71 +3,91 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Baumi-X – Indie-Entwickler</title>
-<meta name="description" content="Baumi-X ist ein unabhängiger Entwickler mobiler Spiele. Aktuelles Projekt: GripRush.">
+<title>Baumix – Entwickler-Website / Developer Website</title>
+<meta name="description" content="Baumix – Indie-Entwickler. Aktuelles Projekt: GripRush, ein Neon-Cyberpunk Endless-Runner für Android.">
 <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="index.html">Baumi-X</a>
+    <a class="brand" href="index.html">Baumix</a>
     <nav class="site-nav">
       <a href="index.html" class="current">Home</a>
-      <a href="games/griprush.html">GripRush</a>
-      <a href="privacy.html">Datenschutz</a>
-      <a href="contact.html">Kontakt</a>
+      <a href="privacy.html">Datenschutz / Privacy</a>
     </nav>
   </div>
 </header>
 
 <div class="wrap">
   <header>
-    <h1>Baumi-X</h1>
-    <div class="subtitle">Indie-Entwickler für mobile Spiele · Independent mobile game developer</div>
+    <h1>Baumix</h1>
+    <div class="subtitle">Entwickler-Website · Developer Website</div>
   </header>
 
-  <div class="card">
-    <h2>Über Baumi-X</h2>
-    <p>
-      Baumi-X entwickelt kleine, fokussierte Mobile Games – ohne Tracking,
-      ohne Werbung, ohne Server-Zwang. Aktuelles Projekt ist <strong>GripRush</strong>,
-      ein schnelles Arcade-Rennspiel für Android.
-    </p>
-    <p>
-      <em>Baumi-X develops small, focused mobile games — no tracking, no ads,
-      no forced server connection. The current project is <strong>GripRush</strong>,
-      a fast-paced arcade racing game for Android.</em>
-    </p>
+  <div class="lang-switch">
+    <a href="#de" id="tab-de" class="active" onclick="showLang('de')">Deutsch</a>
+    <a href="#en" id="tab-en" onclick="showLang('en')">English</a>
   </div>
 
-  <div class="card">
-    <h2>Projekte</h2>
-    <div class="card-grid">
-      <div class="card" style="margin-bottom:0;">
-        <h3>GripRush</h3>
-        <p>Arcade-Rennspiel für Android. Sammle Coins, schalte Upgrades frei und
-        jage deinen Highscore – komplett offline spielbar.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="games/griprush.html">Projektseite ansehen</a>
-        </div>
-      </div>
-    </div>
-  </div>
+  <section id="de" class="lang-section active">
+    <h3>Über mich</h3>
+    <p>Ich bin <strong>Baumix</strong>, ein unabhängiger Indie-Entwickler für
+    mobile Spiele.</p>
 
-  <div class="card">
-    <h2>Datenschutz &amp; Kontakt</h2>
+    <h2>GripRush</h2>
     <p>
-      Datenschutzerklärung für GripRush (DE/EN):
-      <a href="privacy.html"><strong>Datenschutzerklärung / Privacy Policy</strong></a>
+      <strong>GripRush</strong> ist ein rasanter Endless-Runner im
+      Neon-Cyberpunk-Stil: Spring, slide und grinde durch ein pulsierendes
+      Parkour-Setting, weiche Hindernissen im letzten Moment aus und jage
+      immer neue Highscores.
     </p>
-    <p>Fragen oder Feedback? <a href="contact.html">Kontaktiere mich</a> oder schreib direkt an
-      <a href="mailto:baumix@gmail.com">baumix@gmail.com</a>.</p>
-  </div>
+    <p><em>Status: In Entwicklung – Coming soon.</em></p>
+
+    <h2>Kontakt</h2>
+    <p><a href="mailto:baumix@gmail.com">baumix@gmail.com</a></p>
+
+    <h2>Datenschutz</h2>
+    <p>Die Datenschutzerklärung für GripRush findest du hier:
+    <a href="privacy.html">Datenschutzerklärung / Privacy Policy</a>.</p>
+  </section>
+
+  <section id="en" class="lang-section">
+    <h3>About me</h3>
+    <p>I'm <strong>Baumix</strong>, an independent indie developer of mobile
+    games.</p>
+
+    <h2>GripRush</h2>
+    <p>
+      <strong>GripRush</strong> is a fast-paced endless runner set in a
+      neon cyberpunk world: jump, slide, and grind through a pulsing
+      parkour setting, dodge obstacles at the last second, and chase ever
+      higher scores.
+    </p>
+    <p><em>Status: In development – coming soon.</em></p>
+
+    <h2>Contact</h2>
+    <p><a href="mailto:baumix@gmail.com">baumix@gmail.com</a></p>
+
+    <h2>Privacy</h2>
+    <p>The privacy policy for GripRush can be found here:
+    <a href="privacy.html">Datenschutzerklärung / Privacy Policy</a>.</p>
+  </section>
 
   <footer class="site-footer">
-    &copy; 2026 Baumi-X · <a href="privacy.html">Datenschutz</a> ·
-    <a href="contact.html">Kontakt</a>
+    &copy; 2026 Baumix · <a href="mailto:baumix@gmail.com">baumix@gmail.com</a> ·
+    <a href="privacy.html">Datenschutzerklärung / Privacy Policy</a>
   </footer>
 </div>
+
+<script>
+function showLang(lang) {
+  document.getElementById('de').classList.toggle('active', lang === 'de');
+  document.getElementById('en').classList.toggle('active', lang === 'en');
+  document.getElementById('tab-de').classList.toggle('active', lang === 'de');
+  document.getElementById('tab-en').classList.toggle('active', lang === 'en');
+}
+// respect hash on load
+if (location.hash === '#en') showLang('en');
+</script>
 </body>
 </html>
