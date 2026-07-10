@@ -34,7 +34,7 @@
     <a href="#en" id="tab-en" onclick="showLang('en')">English</a>
   </div>
 
-  <section id="de" class="lang-section active">
+  <section id="de" class="lang-section active" lang="de">
     <h3>Über mich</h3>
     <p>Ich bin <strong>Baumix</strong>, ein unabhängiger Indie-Entwickler für
     mobile Spiele.</p>
@@ -49,14 +49,14 @@
     <p><em>Status: In Entwicklung – Coming soon.</em></p>
 
     <h2>Kontakt</h2>
-    <p><a href="mailto:baumix@gmail.com">baumix@gmail.com</a></p>
+    <p><a href="#" class="mail-link" data-user="baumix" data-domain="gmail.com">wird geladen …</a></p>
 
     <h2>Datenschutz</h2>
     <p>Die Datenschutzerklärung für GripRush findest du hier:
     <a href="privacy.html">Datenschutzerklärung / Privacy Policy</a>.</p>
   </section>
 
-  <section id="en" class="lang-section">
+  <section id="en" class="lang-section" lang="en">
     <h3>About me</h3>
     <p>I'm <strong>Baumix</strong>, an independent indie developer of mobile
     games.</p>
@@ -71,7 +71,7 @@
     <p><em>Status: In development – coming soon.</em></p>
 
     <h2>Contact</h2>
-    <p><a href="mailto:baumix@gmail.com">baumix@gmail.com</a></p>
+    <p><a href="#" class="mail-link" data-user="baumix" data-domain="gmail.com">loading …</a></p>
 
     <h2>Privacy</h2>
     <p>The privacy policy for GripRush can be found here:
@@ -79,7 +79,7 @@
   </section>
 
   <footer class="site-footer">
-    &copy; 2026 Baumix · <a href="mailto:baumix@gmail.com">baumix@gmail.com</a> ·
+    &copy; 2026 Baumix · <a href="#" class="mail-link" data-user="baumix" data-domain="gmail.com">wird geladen …</a> ·
     <a href="privacy.html">Datenschutzerklärung / Privacy Policy</a> ·
     <a href="impressum.html">Impressum / Legal Notice</a>
   </footer>
@@ -94,6 +94,13 @@ function showLang(lang) {
 }
 // respect hash on load
 if (location.hash === '#en') showLang('en');
+
+// simple email de-obfuscation to reduce plain-text scraping
+document.querySelectorAll('.mail-link').forEach(function (el) {
+  var address = el.dataset.user + '@' + el.dataset.domain;
+  el.href = 'mailto:' + address;
+  el.textContent = address;
+});
 </script>
 </body>
 </html>
