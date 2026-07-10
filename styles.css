@@ -31,6 +31,23 @@ body {
 
 a { color: var(--accent-a); }
 
+/* Hero banner */
+.hero-banner {
+  width: 100%;
+  background: var(--bg);
+  line-height: 0;
+  overflow: hidden;
+}
+
+.hero-banner img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 420px;
+  object-fit: cover;
+  background: var(--bg);
+}
+
 /* Site header / nav */
 .site-header {
   border-bottom: 1px solid var(--border);

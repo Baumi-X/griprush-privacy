@@ -17,6 +17,11 @@ Live site: https://baumi-x.github.io/griprush-privacy/
   Play Store listing.
 - `styles.css` – Shared dark-theme stylesheet (header/nav, language
   switch, footer) used by both pages.
+- `assets/dev-header.jpg` – Optimized hero/header banner shown at the top
+  of the landing page (Baumix "BX" logo + "BAUMIX / GAME STUDIO" on a neon
+  cyan/magenta grid background). Resized from the 4096×2304 source asset
+  (maintained in the main GripRush repo) to 1920px width and re-compressed
+  as JPEG (~58 KB) for fast page loads.
 
 Both pages use the same DE/EN language-switch mechanism (hash-based
 section toggling), matching colors/fonts (`#0b0f14` background, `#e8ecf1`
